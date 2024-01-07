@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1180.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Musclehut.controller.MemberFormController">
+   <children>
+      <Pane layoutX="65.0" layoutY="26.0" opacity="0.68" prefHeight="81.0" prefWidth="1090.0" style="-fx-background-color: #C9AEFF; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 1;">
+         <effect>
+            <Blend mode="MULTIPLY" opacity="0.6" />
+         </effect>
+      </Pane>
+      <Pane layoutX="64.0" layoutY="134.0" opacity="0.5" prefHeight="745.0" prefWidth="1090.0" style="-fx-background-radius: 20; -fx-background-color: #C9AEFF; -fx-border-color: black; -fx-border-width: 0; -fx-border-radius: 20;">
+         <effect>
+            <Blend mode="MULTIPLY" />
+         </effect>
+      </Pane>
+      <Text fill="#164863" layoutX="88.0" layoutY="79.0" opacity="0.94" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: 20;" text="Member Manage">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="91.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="92.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="658.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Phone">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="93.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="661.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="91.0" layoutY="213.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="459.0" promptText="Enter member id (Eg - M001)" />
+      <TextField fx:id="txtName" layoutX="89.0" layoutY="302.0" prefHeight="31.0" prefWidth="459.0" promptText="Full name" />
+      <TextField fx:id="txtAddress" layoutX="92.0" layoutY="396.0" prefHeight="31.0" prefWidth="459.0" promptText="Current address" />
+      <TextField fx:id="txtPhone" layoutX="656.0" layoutY="211.0" prefHeight="31.0" prefWidth="459.0" promptText="Mobile number" />
+      <TextField fx:id="txtEmail" layoutX="656.0" layoutY="300.0" prefHeight="31.0" prefWidth="459.0" promptText="Member email" />
+      <JFXButton layoutX="907.0" layoutY="379.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CDCBEE;" text="Clear" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="780.0" layoutY="379.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #FFB25F;" text="Update" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="658.0" layoutY="379.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #38FF2E;" text="Save" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1032.0" layoutY="379.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #FF4637;" text="Delete" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblMember" layoutX="88.0" layoutY="494.0" prefHeight="357.0" prefWidth="931.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="76.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="121.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="237.99996948242188" text="Address" />
+            <TableColumn fx:id="colPhone" prefWidth="192.00003051757812" text="Phone" />
+            <TableColumn fx:id="colEmail" prefWidth="300.0" text="Email" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1040.0" layoutY="817.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CDCBEE;" text="Back" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="1088.0" layoutY="47.0">
+         <image>
+            <Image url="@../icon/team.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

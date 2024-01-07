@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1180.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Musclehut.controller.EmployeeFormController">
+   <children>
+      <Pane layoutX="65.0" layoutY="26.0" opacity="0.68" prefHeight="81.0" prefWidth="1090.0" style="-fx-background-color: #C9AEFF; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 1;">
+         <effect>
+            <Blend mode="MULTIPLY" opacity="0.6" />
+         </effect>
+      </Pane>
+      <Pane layoutX="64.0" layoutY="134.0" opacity="0.5" prefHeight="745.0" prefWidth="1090.0" style="-fx-background-radius: 20; -fx-background-color: #C9AEFF; -fx-border-color: black; -fx-border-width: 0; -fx-border-radius: 20;">
+         <effect>
+            <Blend mode="MULTIPLY" />
+         </effect>
+      </Pane>
+      <Text fill="#164863" layoutX="88.0" layoutY="79.0" opacity="0.88" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Manage">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="91.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="92.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="520.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Phone">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="93.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#164863" layoutX="523.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="91.0" layoutY="213.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="378.0" promptText="Eg - E001" />
+      <TextField fx:id="txtName" layoutX="89.0" layoutY="302.0" prefHeight="31.0" prefWidth="378.0" />
+      <TextField fx:id="txtAddress" layoutX="92.0" layoutY="396.0" prefHeight="31.0" prefWidth="378.0" />
+      <TextField fx:id="txtPhone" layoutX="518.0" layoutY="213.0" prefHeight="31.0" prefWidth="378.0" />
+      <TextField fx:id="txtEmail" layoutX="518.0" layoutY="301.0" prefHeight="31.0" prefWidth="378.0" />
+      <JFXButton layoutX="946.0" layoutY="322.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CDCBEE;" text="Clear" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="946.0" layoutY="266.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #FFB25F;" text="Update" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="946.0" layoutY="215.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #38FF2E;" text="Save" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="946.0" layoutY="376.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #FF4637;" text="Delete" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblEmployee" layoutX="88.0" layoutY="494.0" prefHeight="357.0" prefWidth="931.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="76.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="125.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="217.0" text="Address" />
+            <TableColumn fx:id="colPhone" prefWidth="166.0" text="Phone" />
+            <TableColumn fx:id="colEmail" prefWidth="199.0" text="Email" />
+            <TableColumn fx:id="colSalary" prefWidth="147.0" text="Salary" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="1040.0" layoutY="817.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #CDCBEE;" text="Back" textFill="#164863">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#164863" layoutX="517.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee salary">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtSalary" layoutX="512.0" layoutY="395.0" prefHeight="31.0" prefWidth="378.0" />
+   </children>
+</AnchorPane>
